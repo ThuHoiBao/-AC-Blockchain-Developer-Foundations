@@ -15,7 +15,7 @@ const block1: Block = {
 };
 block1.current_hash = calculateHash(block1.index, block1.timestamp, block1.transactions, block1.previous_hash);
 
-console.log("✅ Block 1:", isValidBlock(block1)); // Expected: true
+console.log(" Block 1:", isValidBlock(block1)); // Expected: true
 
 block1.current_hash = "invalid_hash";
-console.log("❌ Block 1 (sai):", isValidBlock(block1)); // Expected: false
+console.log(" Block 1 (sai):", isValidBlock(block1)); // Expected: false
