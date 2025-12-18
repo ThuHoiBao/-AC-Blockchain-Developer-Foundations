@@ -14,7 +14,11 @@ Viết một smart contract tên là `Welcome`:
 Sau đó:
 1. Deploy contract trên Remix IDE.
 2. Gọi hàm `getGreeting()` và chụp màn hình kết quả.
+![alt text](image.png)
+
+
 3. (Tuỳ chọn) Sửa hàm để trả thêm địa chỉ người deploy (msg.sender).
+![alt text](image-1.png)
 
 ## 💡 Gợi ý triển khai
 - Dán vào Remix tại: https://remix.ethereum.org
