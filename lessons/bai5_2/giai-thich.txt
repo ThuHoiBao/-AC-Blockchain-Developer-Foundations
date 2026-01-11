@@ -1,0 +1,25 @@
+Bai tap 5.2 - Giai thich cac script Hardhat
+
+1) Script deploy: ac-hardhat-template/deploy/1-deploy.ts
+- Su dung hardhat-deploy. Lay tai khoan "deployer" tu named accounts.
+- Log ten network va bat dau deploy contract Counter khong co tham so.
+- autoMine: true (block duoc mine ngay tren local), skipIfAlreadyDeployed: false (luon deploy lai khi chay lenh deploy tag "deploy").
+- Gan func.tags = ["deploy"] de chay bang lenh: npx hardhat deploy --network <network> --tags deploy
+
+2) Script tuong tac: ac-hardhat-template/scripts/test.ts
+- Lay signer dau tien (deployer) tu ethers.getSigners().
+- Gan vao contract Counter da duoc deploy: ethers.getContract("Counter").
+- Goi counter.increment(), cho transaction duoc mine (tx.wait()).
+- Doc lai counter.getCount(), in ra console. Sau 1 lan increment thi so duoc in ra se la 1.
+
+3) Unit test: ac-hardhat-template/test/Counter.test.ts
+- Dung mocha + chai. Trong before() tu deploy Counter bang ethers.getContractFactory().
+- Test "Deployment": kiem tra getCount() ban dau la 0n.
+- Test "Increment": goi increment() mot lan, cho mine, sau do getCount() phai bang 1n.
+
+4) Thu tu chay de kiem tra bai tap
+- npx hardhat run test            # chay unit test tren network mac dinh (hardhat)
+- npx hardhat deploy --network sepolia --tags deploy  # deploy Counter len Sepolia (can cau hinh RPC + private key)
+- npx hardhat run scripts/test.ts # goi increment va in count
+
+Ky vong output: sau khi chay scripts/test.ts se in ra "Current count is: 1" neu increment thanh cong mot lan.
