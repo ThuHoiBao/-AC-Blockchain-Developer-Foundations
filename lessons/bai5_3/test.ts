@@ -43,7 +43,7 @@ async function main() {
   const tx = await contractDecrement.decrement();
   console.log("Transaction hash:", tx.hash);
   
-  // Chờ giao dịch được mine
+
   await tx.wait();
   console.log("✓ Transaction confirmed");
 
