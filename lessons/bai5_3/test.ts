@@ -47,7 +47,7 @@ async function main() {
   await tx.wait();
   console.log("✓ Transaction confirmed");
 
-  // Đọc count từ Decrement SAU khi gọi decrement()
+ 
   const countAfterDecrement = await contractDecrement.getCount();
   console.log("Decrement count AFTER decrement():", countAfterDecrement.toString());
 }
