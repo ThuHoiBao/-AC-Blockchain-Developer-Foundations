@@ -33,3 +33,18 @@
 npx hardhat deploy --network sepolia --tags deploy
 ```
 Sau khi deploy, chạy file test.ts để mint một NFT và trả về địa chỉ sở hữu.
+
+
+cd "D:\Blockchain Intern\-AC-Blockchain-Developer-Foundations\lessons\bai6_3\my-nft-project"
+
+# Compile
+npm run compile
+
+# Test local
+npm test
+
+# Deploy lên Sepolia
+npm run deploy:sepolia
+
+# Mint NFT sau khi deploy
+npx hardhat run scripts/test.ts --network sepolia

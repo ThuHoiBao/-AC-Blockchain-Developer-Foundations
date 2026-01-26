@@ -22,7 +22,8 @@
 
 Chạy:
 ```bash
-npx hardhat run test # chạy unit test trước khi deploy 
+npx hardhat run test 
+ npx hardhat test 
 npx hardhat deploy --network sepolia --tags deploy # deploy lên sepolia network
 npx hardhat run scripts/test.ts
 ```

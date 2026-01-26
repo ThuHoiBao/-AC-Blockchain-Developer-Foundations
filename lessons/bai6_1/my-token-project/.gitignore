@@ -1,0 +1,15 @@
+node_modules/
+cache/
+artifacts/
+deployments/*
+!deployments/README.md
+!deployments/sepolia
+!deployments/localhost
+deployments/**/*.json
+deployments/**/solcInputs
+typechain/
+.env
+*.log
+coverage/
+coverage.json
+dist/

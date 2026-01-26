@@ -3,7 +3,7 @@ import { ethers } from "ethers";
 async function main() {
   const provider = new ethers.JsonRpcProvider("https://ethereum-sepolia-rpc.publicnode.com");
 
-  // 🔑 Tạo signer từ private key để ký giao dịch
+
   const privateKey = process.env.TESTNET_PRIVATE_KEY || "0xe384cd6fc90a57e9b6aa7a9d1886d1f7ac0870caeac7b29da490f3f53bdd6c0f";
   const signer = new ethers.Wallet(privateKey, provider);
 
